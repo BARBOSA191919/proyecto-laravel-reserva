@@ -1,0 +1,602 @@
+/* Estilos para la página de compra individual del evento */
+* {
+    font-family: 'Balsamiq Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Balsamiq Sans', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0; /* Remove padding from body */
+    display: flex;
+    flex-direction: column; /* Arrange header and content vertically */
+    align-items: center; /* Center content horizontally */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Estilos para el encabezado */
+.encabezado {
+    position: absolute; /* Keep header fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333; /* Add a background color for visibility */
+    /* Mantén cualquier otro estilo que ya tenga tu encabezado */
+}
+
+.contenedor-logotipo {
+    width: 280px;
+    height: 100px;
+    margin-top: 0px;
+}
+
+.logotipo {
+    width: 280px;
+    height: 140px;
+    margin: 27px 0px 0px 25px;
+    cursor: pointer;
+    object-fit: cover; /* Recorta sin deformar */
+}
+
+.texto-principal {
+    margin: 80px 0px 0px 40px;
+    display: flex;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 100px;
+    cursor: pointer;
+    height: 40px;
+    width: auto;
+}
+
+.triangulo {
+    margin: 5px 0px 0px 20px;
+    width: 0px;
+    height: 0px;
+    border-top: 15px solid white;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+.carrito-container {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: 50px 0px 10px 260px;
+}
+
+.carrito {
+    margin: 0px 100px 0px 0px;
+}
+
+.carro2 {
+    margin: 0px 0px 0px 260px;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    cursor: pointer;
+    right: 250px;
+}
+
+.carrito-desplegable {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    width: 320px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    font-family: 'Balsamiq Sans', sans-serif;
+    text-align: center;
+}
+
+.carrito-desplegable h2 {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#items-carrito {
+    /* Estilos para la lista de items en el carrito (si los tienes) */
+}
+
+.carrito-total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: #fdfdfd;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+
+
+.carrito-boton-comprar {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carrito-boton-comprar:hover {
+    background-color: #0056b3;
+}
+
+.texto-principal1 {
+    margin: 80px 10px 0px 30px;
+    display: flex;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 100px;
+    cursor: pointer;
+    height: 40px;
+    text-decoration: none;
+    width: auto;
+}
+
+.contenedor-perfil {
+    width: 80px;
+    height: 1px;
+    margin-top: 40px 0px;
+}
+
+.perfil {
+    margin: 40px 0px;
+    width: 140px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.barra {
+    margin: 200px 0px 0px -1350px;
+    width: 1200px;
+    height: 66px;
+    background-color: white;
+    border-bottom: 0.3px solid gray;
+    border-left: 0.3px solid gray;
+    border-top: 0.3px solid gray;
+    border-right: 0.3px solid gray;
+}
+
+.barra nav {
+    /* Estilos para la navegación dentro de la barra (si los tienes) */
+}
+
+.logosg {
+    margin: 10px 0px 0px 10px;
+    width: 50px;
+}
+
+.ciudad {
+    margin: -40px 1000px 0px 0px;
+    text-align: center;
+    color: gray;
+    font-size: 18px;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 100px;
+    cursor: pointer;
+}
+
+.triangulo1 {
+    margin: -15px 0px 0px 150px;
+    width: 0px;
+    height: 0px;
+    border-top: 12px solid gray;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.divisor {
+    margin: -43px 0px 0px 200px;
+    width: 0.5px;
+    height: 67px;
+    background-color: gray;
+    border: none;
+}
+
+.menu-categorias {
+    position: relative;
+}
+
+#botonCategorias {
+    /* Estilos para el botón/icono de categorías (si los tienes) */
+}
+
+.logosg1 {
+    margin: 0px 0px 0px 10px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.categoria {
+    margin: -40px 0px 0px 72px;
+    text-align: center;
+    color: gray;
+    font-size: 18px;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 100px;
+    cursor: pointer;
+}
+
+.triangulo2 {
+    margin: -18px 0px 0px 170px;
+    width: 0px;
+    height: 0px;
+    border-top: 12px solid gray;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#miTriangulo {
+    /* Estilos específicos para el triángulo del menú de categorías (si los tienes) */
+}
+
+.contenido-categorias {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 14px;
+}
+
+.contenido-categorias a {
+    color: aqua;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.contenido-categorias a:hover {
+    background-color: #f1f1f1;
+    color: aqua;
+}
+
+.divisor2 {
+    margin: -41px 0px 0px 200px;
+    width: 0.5px;
+    height: 67px;
+    background-color: gray;
+    border: none;
+}
+
+.logosg3 {
+    margin: 2px 0px 0px 10px;
+    width: 55px;
+}
+
+.fecha {
+    margin: -40px 0px 0px 84px;
+    text-align: center;
+    color: gray;
+    font-size: 18px;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 100px;
+    cursor: pointer;
+}
+
+.triangulo3 {
+    margin: -19px 0px 0px 160px;
+    width: 0px;
+    height: 0px;
+    border-top: 12px solid gray;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.divisor3 {
+    margin: -42px 0px 0px 200px;
+    width: 0.5px;
+    height: 67px;
+    background-color: gray;
+    border: none;
+}
+
+.lupa {
+    margin: -60px 0px 0px 4px;
+    position: absolute;
+    width: 53px;
+    height: 59px;
+    pointer-events: none;
+}
+
+.buscador2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    width: 500px; /* Aumenta el ancho */
+    height: 65px; /* Aumenta la altura */
+    font-size: 24px; /* Aumenta el tamaño del texto, incluido el placeholder */
+    text-align: left;
+    padding: 0px; /* Añade espacio interno */
+    border: 1% solid gray; /* Borde más visible */
+    color: #b4b3b3;
+}
+
+.buscador2::placeholder {
+    margin: auto;
+    padding: 0px;
+    font-size: 20px; /* Tamaño del texto */
+    font-family: "Balsamiq Sans", sans-serif; /* Tipo de letra */
+    color: #b4b3b3; /* Color del texto */
+    font-weight: bold; /* Negrita */
+    opacity: 1; /* Asegura que el color sea visible */
+    border: none;
+}
+
+.buscador2:focus {
+    padding-left: 60px;
+    font-size: 20px;
+    color: #b4b3b3;
+    font-family: "Balsamiq Sans", sans-serif;
+}
+
+.buscador2:valid {
+    padding-left: 60px;
+    font-size: 20px;
+    color: #b4b3b3;
+    font-family: "Balsamiq Sans", sans-serif;
+}
+
+.buscador2:-webkit-autofill,
+.buscador2:-webkit-autofill:hover,
+.buscador2:-webkit-autofill:focus {
+    box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: #b4b3b3;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 60px;
+}
+
+.lupa3 {
+    position: absolute;
+    margin: -67px 0px 0px 901px;
+    width: 98px;
+    height: 65px;
+    cursor: pointer;
+}
+
+/* Estilos para el contenido principal */
+.contenido-principal {
+    margin-top: 356px; /* Adjust based on the actual height of your header */
+    padding: 20px; /* Add some padding around the content */
+    width: 90%; /* Occupy most of the page width */
+    max-width: 1200px; /* Set a maximum width if needed */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center the content within this container */
+    align-items: flex-start; /* Align items to the start vertically */
+}
+
+.contenedor-compra {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Occupy the full width of the content-principal */
+    max-width: 600px; /* Limita el ancho del contenedor de compra */
+    box-sizing: border-box;
+}
+
+.contenedor-compra h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.contenedor-compra img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detalles-evento {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 15px 20px;
+}
+
+.detalles-evento > p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.icono-info {
+    width: 18px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.info-adicional {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.info-adicional .icono-info {
+    margin-right: 5px;
+}
+
+/* Estilos para el formulario de cantidad de entradas */
+#form-agregar-carrito {
+    /* Estilos para el formulario de agregar al carrito (si los tienes) */
+}
+
+.cantidad-entradas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cantidad-entradas label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+}
+
+#cantidad_entradas {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+
+
+/* === MENÚ CARRITO MEJORADO === */
+
+#menu-carrito {
+    width: 360px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    z-index: 1000;
+    font-family: 'Balsamiq Sans', sans-serif;
+}
+
+#menu-carrito h3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #333;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 8px;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #000000;
+    position: relative;
+}
+
+.carrito-imagen {
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.carrito-item-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 4px 0;
+}
+
+.carrito-item-nombre {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 0 4px;
+    color: #222;
+}
+
+.carrito-item-fecha,
+.carrito-item-edad,
+.carrito-item-cantidad {
+    color: #666;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.carrito-item-precio {
+    font-weight: bold;
+    font-size: 15px;
+    color: #444;
+    margin-top: 15px;
+    text-align: right;
+}
+
+.borrar-item {
+    position: absolute;
+    top: 5px;
+    margin-bottom: 5px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: url('/ruta/icono-borrar.svg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.borrar-item:hover {
+    transform: scale(1.15);
+}
+
+
+.boton-comprar {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 14px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.boton-comprar:hover {
+    background-color: #0056b3;
+}

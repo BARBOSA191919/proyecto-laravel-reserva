@@ -1,0 +1,196 @@
+/* Quita margen y padding del body y html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+}
+
+.principal{
+    background-color: #efeded;
+}
+.encabezado{
+    width: 100%;
+    height: 350px;
+    background-color: #43493f;
+    margin: 0px;
+    display: flex;
+    
+}
+
+.texto-principal{
+    margin: 80px 0px 0px 40px;
+    display: flex;
+    text-align: center;
+    color:white;
+    font-size: 24px;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 100px;
+    cursor: pointer;
+    height: 40px;
+    width: auto;
+}
+.texto-principal1{
+    margin: 80px 0px 0px -20px;
+    display: flex;
+    text-align: center;
+    color:white;
+    font-size: 24px;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 100px;
+    cursor: pointer;
+    height: 40px;
+    width: auto;
+}
+.carrito{
+    margin: 50px 20px 0px 300px;
+    width: 90px;
+    height: 90px;
+}
+.carrito:hover{
+    cursor: pointer;
+}
+
+.perfil{
+    margin: 40px 0px;
+    width: 140px;
+    height: 120px;
+    cursor: pointer;
+
+}
+.triangulo{
+    margin: 5px 0px 0px 20px;
+    width: 0px;
+    height: 0px;
+    border-top: 15px solid white;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+
+.logotipo{
+    width: 280px;
+    height: 140px;
+    margin: 27px 0px 0px 25px;
+    cursor: pointer;
+    object-fit: cover; /* Recorta sin deformar */
+}
+
+
+.fondo{
+    max-width: 1440px;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 30px;
+    
+    
+
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Ancho del contenedor */
+    text-align: left; /* Alineación del texto dentro del contenedor */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Centrar el título */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+button[type="submit"] {
+    background-color: #dc3545; /* Color rojo del botón */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    width: auto; /* Ajustar ancho al contenido */
+    display: block; /* Para que ocupe su propio bloque y se pueda centrar con margin auto si es necesario */
+    text-align: center; /* Centrar el texto del botón */
+    margin-top: 20px; /* Espacio superior */
+}
+
+button[type="submit"]:hover {
+    background-color: #c82333;
+}
+
+.create-account a {
+    display: block;
+    margin-top: 15px;
+    color: #28a745; /* Color verde para crear cuenta */
+    text-decoration: none;
+    font-size: 0.9em;
+    text-align: center; /* Centrar el enlace */
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+.login-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.login-header p {
+    font-size: 0.9em;
+    color: #777;
+}
+
