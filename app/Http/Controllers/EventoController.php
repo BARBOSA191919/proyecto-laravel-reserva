@@ -23,7 +23,11 @@ class EventoController extends Controller
     $eventos = Evento::all();
     return view('eventos.create', compact('eventos'));
     }
-
+    public function getCiudades()
+    {
+        $ciudades = Evento::distinct()->pluck('ciudad')->sort()->values();
+        return response()->json($ciudades);
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -32,6 +36,8 @@ class EventoController extends Controller
      */
     public function store(Request $request): RedirectResponse
 {
+
+
     $request->validate([
         'nombre' => 'required|string|max:255',
         'imagen' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -130,6 +136,12 @@ class EventoController extends Controller
 
         return view('resultados', compact('eventos', 'query'));
     }
+
+    public function mostrarPorCiudad($ciudad)
+{
+    $eventos = Evento::where('ciudad', $ciudad)->get();
+    return view('resultados', compact('eventos', 'ciudad'));
+}
 
 public function mostrarConciertos()
 {

@@ -9,9 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="{{ asset('js/bienvenida.js') }}" defer></script>
-    
-    
-    
 </head>
 <body class="principal">
     <header class="encabezado">
@@ -40,13 +37,30 @@
             </div>
             @endauth
         </div>
-        <a href="{{ route('contactanos') }}" class="texto-principal1">Contáctanos</a>
-        <a href="{{ route('login') }}" class="contenedor-perfil"><img class="perfil" src="{{ asset('img/perfil.png') }}" alt="Perfil"></a>
-        <div class="barra">
-            <nav>
-                <img class="logosg" src="{{ asset('img/location.png') }}" alt="Ubicación">
-                <h2 class="ciudad">Ciudad</h2>
-                <div class="triangulo1"></div>
+            <div class="contenedor-perfil">
+            <a href="{{ route('login') }}" class="perfil-link">
+                <img class="perfil" src="{{ asset('img/perfil.png') }}" alt="Perfil">
+            </a>
+            @auth
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="logout-form">
+                    @csrf
+                    <a href="{{ route('logout') }}" class="cerrar-sesion"
+                    onclick="event.preventDefault(); this.closest('form').submit();">
+                        Cerrar Sesión
+                    </a>
+                </form>
+            @endauth
+        </div>
+  <div class="barra">
+    <nav>
+        <div class="menu-ciudades" id="botonCiudades">
+            <img class="logosg" src="{{ asset('img/location.png') }}" alt="Ubicación">
+            <h2 class="ciudad">Ciudad</h2>
+            <div class="triangulo1" id="trianguloCiudades"></div>
+            <div id="menuCiudades" class="contenido-ciudades oculto">
+                <!-- Las ciudades se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
                 <div class="divisor">
                     <div class="menu-categorias" id="botonCategorias">
                         <img id="botonCategorias" class="logosg1" src="{{ asset('img/categoria.png') }}" alt="Categoría">
@@ -63,6 +77,7 @@
                             <a class="titulo-categorias" href="{{ route('categorias.teatro') }}">Teatro</a>
                         </div>
                     </div>
+                    
                     <div class="divisor2">
                         <img class="logosg3" src="{{ asset('img/calendario.png') }}" alt="Calendario">
                         <h2 class="fecha">Fecha</h2>
@@ -80,7 +95,7 @@
         </div>
     </header>
     <div class="fondo">
-        <h2 class="titulo-destacados">DESTACADOS</h2>
+       <center> <h2 class="titulo-destacados">DESTACADOS</h2></center>
         <div class="contenedor-destacados">
     @foreach ($eventos as $evento)
         <div class="evento-tarjeta">
@@ -107,16 +122,6 @@
         </div>
             @endforeach
         </div>
-        @auth
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-            <a href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
-                Cerrar Sesión
-            </a>
-        @endauth
     </div>
 </div>
         <footer class="pie-pagina">
@@ -128,7 +133,7 @@
             </div>
 
             <div class="footer-section">
-                <h3>ReservaYa</h3>
+               
                 <p><img src="{{ asset('img/location.png') }}" alt="Ubicación" class="footer-icon">Calle 67B #2B-56</p>
                 <p class="call-center">Call Center</p>
                 <p><img src="{{ asset('img/phone.png') }}" alt="Teléfono" class="footer-icon">+57 3154588360</p>

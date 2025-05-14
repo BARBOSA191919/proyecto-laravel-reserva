@@ -67,7 +67,7 @@ Route::get('/categorias/museoexposiciones', [EventoController::class, 'mostrarMu
 Route::get('/categorias/museoexposiciones/remover', [EventoController::class, 'removerFiltroMuseoexposiciones'])->name('categorias.museoexposiciones.remover');
 Route::get('/categorias/teatro', [EventoController::class, 'mostrarTeatro'])->name('categorias.teatro');
 Route::get('/categorias/teatro/remover', [EventoController::class, 'removerFiltroTeatro'])->name('categorias.teatro.remover');
-
-
+Route::get('/ciudades', [EventoController::class, 'getCiudades'])->name('ciudades');
+Route::get('/eventos/ciudad/{ciudad}', [EventoController::class, 'mostrarPorCiudad'])->name('eventos.porCiudad');
 
 Route::get('/buscar', [EventoController::class, 'buscar'])->name('eventos.buscar');

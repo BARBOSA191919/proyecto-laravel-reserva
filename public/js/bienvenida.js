@@ -137,3 +137,44 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 0);
 });
+
+// Funcionalidad para el menú de ciudades
+document.addEventListener('DOMContentLoaded', function () {
+    const botonCiudades = document.getElementById('botonCiudades');
+    const menuCiudades = document.getElementById('menuCiudades');
+    const trianguloCiudades = document.getElementById('trianguloCiudades');
+
+    if (botonCiudades && menuCiudades && trianguloCiudades) {
+        // Cargar ciudades dinámicamente desde el servidor
+        fetch('/ciudades')
+            .then(response => response.json())
+            .then(ciudades => {
+                menuCiudades.innerHTML = ''; // Limpiar el menú
+                ciudades.forEach(ciudad => {
+                    const enlace = document.createElement('a');
+                    enlace.classList.add('titulo-ciudades');
+                    enlace.href = `/eventos/ciudad/${encodeURIComponent(ciudad)}`;
+                    enlace.textContent = ciudad;
+                    menuCiudades.appendChild(enlace);
+                });
+            })
+            .catch(error => {
+                console.error('Error al cargar ciudades:', error);
+            });
+
+        // Toggle del menú de ciudades
+        botonCiudades.addEventListener('click', function (event) {
+            event.stopPropagation();
+            trianguloCiudades.classList.toggle('rotar');
+            menuCiudades.style.display = menuCiudades.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Cerrar el menú al hacer clic fuera
+        window.addEventListener('click', function () {
+            if (menuCiudades.style.display === 'block') {
+                menuCiudades.style.display = 'none';
+                trianguloCiudades.classList.remove('rotar');
+            }
+        });
+    }
+});
